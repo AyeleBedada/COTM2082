@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>week14</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<div class="mobile-bottom-nav">
+
+<a href="index.html">Home</a>
+
+<a href="lectures.html">Lectures</a>
+
+<a href="weekly-exercises.html">Exercises</a>
+
+<a href="weekly-assessment.html">Assessment</a>
+
+<a href="feedback.html">Feedback</a>
+
+</div>
+
+
+<body>
+
+
+<!-- NAVBAR COPY FROM index.html -->
+
+
+<header>
+
+<div id="mobileMenu" class="mobile-menu">
+
+<div class="menu-panel" id="mainMenu">
+
+<a href="index.html">Home</a>
+<a href="introduction.html">Introduction</a>
+<a href="syllabus.html">Syllabus</a>
+
+<button onclick="openSubMenu('lectureMenu')">Lectures ▸</button>
+<button onclick="openSubMenu('weekMenu')">Weekly Exercises ▸</button>
+
+
+<a href="weekly-assessment.html">Weekly Assessment</a>
+<a href="attendance.html">Attendance</a>
+<a href="instructors.html">For Instructors</a>
+
+<button onclick="openSubMenu('quizMenu')">Miscellaneous ▸</button>
+
+<a href="feedback.html">Your Feedback</a>
+
+</div>
+
+
+<div class="menu-panel submenu-panel" id="lectureMenu">
+
+<button class="back-btn" onclick="goBack()">◂ Back</button>
+
+<a href="lecture1.html">Lecture 1</a>
+<a href="lecture2.html">Lecture 2</a>
+<a href="lecture3.html">Lecture 3</a>
+<a href="lecture4.html">Lecture 4</a>
+<a href="lecture5.html">Lecture 5</a>
+<a href="lecture6.html">Lecture 6</a>
+<a href="lecture6.html">Lecture 7</a>
+
+</div>
+
+<div class="menu-panel submenu-panel" id="weekMenu">
+
+<button class="back-btn" onclick="goBack()">◂ Back</button>
+
+<a href="week01.html">Week 01</a>
+<a href="week02.html">Week 02</a>
+<a href="week03.html">Week 03</a>
+<a href="week04.html">Week 04</a>
+<a href="week05.html">Week 05</a>
+<a href="week06.html">Week 06</a>
+<a href="week07.html">Week 07</a>
+<a href="week08.html">Week 08</a>
+<a href="week09.html">Week 09</a>
+<a href="week10.html">Week 10</a>
+<a href="week11.html">Week 11</a>
+<a href="week12.html">Week 12</a>
+<a href="week13.html">Week 13</a>
+<a href="week14.html">Week 14</a>
+<a href="week15.html">Week 15</a>
+<a href="week16.html">Week 16</a>
+
+</div>
+
+
+<div class="menu-panel submenu-panel" id="quizMenu">
+
+<button class="back-btn" onclick="goBack()">◂ Back</button>
+
+<a href="quiz01.html">Quiz 01</a>
+<a href="quiz02.html">Quiz 02</a>
+<a href="quiz03.html">Quiz 03</a>
+<a href="quiz04.html">Quiz 04</a>
+<a href="quiz05.html">Quiz 05</a>
+<a href="quiz06.html">Quiz 06</a>
+<a href="quiz07.html">Quiz 07</a>
+<a href="exam.html">Final Exam</a>
+
+</div>
+
+</div>
+
+
+
+<div class="nav-container">
+
+<div class="logo">COTM2082</div>
+<button id="darkToggle" onclick="toggleDarkMode()">🌙</button>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav>
+
+<ul id="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="syllabus.html">Syllabus</a></li>
+
+<li class="has-submenu">
+<a href="#">Lectures ▾</a>
+
+<ul class="submenu">
+<li><a href="lecture1.html">Lecture 1</a></li>
+<li><a href="lecture2.html">Lecture 2</a></li>
+<li><a href="lecture3.html">Lecture 3</a></li>
+<li><a href="lecture4.html">Lecture 4</a></li>
+<li><a href="lecture5.html">Lecture 5</a></li>
+<li><a href="lecture6.html">Lecture 6</a></li>
+<li><a href="lecture6.html">Lecture 7</a></li>
+</ul>
+</li>
+
+<li class="has-submenu">
+
+<a href="#">Weekly Exercises ▸</a>
+
+<ul class="submenu">
+
+<li><a href="week01.html">Week 01</a></li>
+<li><a href="week02.html">Week 02</a></li>
+<li><a href="week03.html">Week 03</a></li>
+<li><a href="week04.html">Week 04</a></li>
+<li><a href="week05.html">Week 05</a></li>
+<li><a href="week06.html">Week 06</a></li>
+<li><a href="week07.html">Week 07</a></li>
+<li><a href="week08.html">Week 08</a></li>
+<li><a href="week09.html">Week 09</a></li>
+<li><a href="week10.html">Week 10</a></li>
+<li><a href="week11.html">Week 11</a></li>
+<li><a href="week12.html">Week 12</a></li>
+<li><a href="week13.html">Week 13</a></li>
+<li><a href="week14.html">Week 14</a></li>
+<li><a href="week15.html">Week 15</a></li>
+<li><a href="week16.html">Week 16</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="weekly-assessment.html">Weekly Assessment</a></li>
+<li><a href="attendance.html">Attendance</a></li>
+<li><a href="instructors.html">For Instructors</a></li>
+
+<li class="has-submenu">
+
+<a href="#">Miscellaneous ▾</a>
+
+<ul class="submenu">
+
+<li><a href="quiz01.html">Quiz 01</a></li>
+<li><a href="quiz02.html">Quiz 02</a></li>
+<li><a href="quiz03.html">Quiz 03</a></li>
+<li><a href="quiz04.html">Quiz 04</a></li>
+<li><a href="quiz05.html">Quiz 05</a></li>
+<li><a href="quiz06.html">Quiz 06</a></li>
+<li><a href="quiz07.html">Quiz 07</a></li>
+<li><a href="exam.html">Final Exam</a></li>
+
+</ul>
+
+</li>
+
+
+<li><a href="feedback.html">Your Feedback</a></li>
+
+</ul>
+
+</nav>
+</div>
+
+</header>
+<!-- NAVBAR COPY FROM index.html -->
+
+
+
+
+
+<div class="container">
+
+<h1>Week 14 Assignment Description</h1>
+<h3>Short Description of Assignement 14 </h3>
+
+<p>
+Coming soon...
+</p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
