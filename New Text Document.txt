@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Quiz 02 – Construction Documentation Theory</title>
+<link rel="stylesheet" href="quiz02.css">
+</head>
+
+<body>
+
+<header>
+<h1>Construction Drafting & Documentation Quiz 02</h1>
+<p>Theory of Drafting, Working Drawings, Specifications & Risk</p>
+</header>
+
+<div class="scoreboard">
+
+<div class="score easy">Easy: <span id="easyScore">0</span>/5</div>
+<div class="score medium">Medium: <span id="mediumScore">0</span>/10</div>
+<div class="score hard">Difficult: <span id="hardScore">0</span>/15</div>
+<div class="score total">Total: <span id="totalScore">0</span>/30</div>
+
+</div>
+
+<div class="quiz-container" id="quiz"></div>
+
+<footer class="footer">
+Construction Drafting Course – Quiz 02
+</footer>
+
+<script src="quiz02.js"></script>
+
+</body>
+</html>
