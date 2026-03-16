@@ -2,6 +2,8 @@
 GLOBAL
 ========================= */
 
+
+
 *{
 margin:0;
 padding:0;
@@ -392,3 +394,14 @@ display:none;
 }
 
 }
+
+/* General selection style for the whole page */
+::selection {
+  background-color: #ff0000; /* desired background color (e.g., yellow #ffcc00;) */
+  color: #ffffff; /* desired text color (e.g., black) */
+}
+
+/* For compatibility with older Firefox versions (pre-61) */
+::-moz-selection {
+  background-color: #ff0000;
+  color: #ffffff;
