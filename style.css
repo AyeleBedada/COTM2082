@@ -79,6 +79,9 @@ nav ul li a:hover{
 background:#1e5c8c;
 }
 
+a{
+text-decoration: none;
+}
 
 /* =========================
 DESKTOP DROPDOWN
@@ -174,7 +177,7 @@ BUTTON
 
 .primary-btn{
 
-background:#1e88e5;
+background:#347c98;; /*#ff000000; */
 color:white;
 
 padding:14px 22px;
