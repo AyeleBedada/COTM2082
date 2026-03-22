@@ -398,6 +398,25 @@ display:none;
 
 }
 
+/* Float window */
+
+#card{
+    width: 400px;
+    height:450px;
+    background-color: yellow;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    padding: 10px;
+    padding-top: 25px;
+    text-align: left;
+}
+
+#myButtonFloat{
+    text-align: right;
+    border: none;
+}
+
 /* General selection style for the whole page */
 ::selection {
   background-color: #ff0000; /* desired background color (e.g., yellow #ffcc00;) */
