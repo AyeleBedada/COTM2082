@@ -403,13 +403,14 @@ display:none;
 #card{
     width: 400px;
     height:450px;
-    background-color: #c0c0c0;
+    background-color: yellow; /* #c0c0c0 */;
     border-radius: 5px;
     cursor: pointer;
     position: fixed;
     padding: 10px;
     padding-top: 25px;
     text-align: left;
+     color: #000000;
 }
 
 #myButtonFloat{
