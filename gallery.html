@@ -5,17 +5,61 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Lecture5</title>
+<title>Gallery</title>
+
+
+        <style>
+        /* Basic reset to ensure the layout covers the whole screen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: sans-serif;
+        }
+
+        /* The container for the columns, set to display as flex */
+        .flex-container {
+            display: flex;
+            height: 100vh; /* This makes the container take up the full viewport height */
+            width: 100%;
+        }
+
+        /* Styles for the left column (20%) */
+        .left-column {
+            width: 20%;
+            background-color: #f0f0f0; /* Light gray background for visibility */
+            padding: 20px;
+            box-sizing: border-box; /* Ensures padding and border are included in the 20% width */
+        }
+
+        /* Styles for the right column (80%) */
+        .right-column {
+            width: 80%;
+            background-color: #ffffff; /* White background */
+            padding: 20px;
+            box-sizing: border-box; /* Ensures padding and border are included in the 80% width */
+        }
+
+        /* Optional: Add a media query for responsiveness (stacks columns on small screens) */
+        @media screen and (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+            .left-column, .right-column {
+                width: 100%; /* Stacks the columns vertically */
+                height: auto;
+            }
+        }
+    </style>
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style1.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
 
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-
 
 </head>
 
@@ -185,28 +229,82 @@
 <!-- NAVBAR COPY FROM index.html -->
 
 
-<div class="container">
+<div class="flex-container">
 
-<h1>Lecture 05</h1>
-<h3>CHeck for your lecture 05 here. </h3>
+        <div class="left-column">
 
-<p>
-       1, Short notes on: Building Codes, Standards, and Specifications; and
-Levels of diagrams drawings <br>
-       2, Construction Drafting and Working Drawings-Discussion <br>
-       3, Representation of superstructure and substructure of a building in construction drawings and details in construction drawing <br>       
-       4, Application of masonry construction materials and techniques in drawings <br>
-       5, Application of concrete construction materials and techniques in drawings <br>
-       6, Application of steel construction materials and techniques in drawings <br>
-       7, Application of renewable material (Such as timber, bamboo, stc.) construction materials and techniques in drawings  <br>
-       8, Coordination of drawings and documents among different disciplines in the built environment <br>
-</p>
+<!--  <h2>20% Sidebar</h2>
+            <p>This area takes up 20% of the page width on a desktop view. It could be used for navigation or a sidebar.</p> 
+-->
+
+
+
+
+<!-- quiz -->
+<button onclick="openSubMenu('quizMenu')" class="primary-btn">Quizzes ▸</button>
+<div class="menu-panel submenu-panel" id="quizMenu">
+<button class="back-btn"  onclick="goBack()">◂ Back</button>
+<a href="quiz01.html">Quiz 01</a>
+<a href="quiz02.html">Quiz 02</a>
+<a href="quiz03.html">Quiz 03</a>
+<a href="quiz04.html">Quiz 04</a>
+<a href="quiz05.html">Quiz 05</a>
+<a href="quiz06.html">Quiz 06</a>
+<a href="quiz07.html">Quiz 07</a>
+<a href="quiz08.html">Quiz 08</a>
+</div> <br>
+
+<!-- Gallery -->
+<button onclick="openSubMenu('galleryMenu')" class="primary-btn">Gallery ▸</button>
+<div class="menu-panel submenu-panel" id="galleryMenu">
+<button class="back-btn"  onclick="goBack()">◂ Back</button>
+<a href="quiz01.html">Exmple works from last year</a>
+</div> <br>
+
+<!-- Verbal Exam -->
+<button onclick="openSubMenu('examMenu')" class="primary-btn">Verbal Exam ▸</button>
+<div class="menu-panel submenu-panel" id="examMenu">
+<button class="back-btn"  onclick="goBack()">◂ Back</button>
+<a href="exam.html">Final Exam</a>
+</div>
 
 
 
 </div>
 
+<div class="right-column">
+
+<!--  <h2>80% Sidebar</h2> -->
+<h1>Gallery of past works</h1>
+<h1>Different works of students from past years</h1>
+<p>The following is an example work of students from past semesters for your reference. If you would like to view more examples use this link: <a href="https://drive.google.com/drive/u/0/folders/1Mi5HCga9M21SJJQ7XFg50VTI8A3wWeIp">More examples of working drawings from past years</a>. You can zoom in to have a close up viewing of these examples.  </p> 
+
+<p>The title blocks of all of these examples are hardly appropriate. Please use the images at this link as examples for your need of reference while preparing title blocks for your working drawings: <a href="https://drive.google.com/drive/folders/1lgjedGZo8dtmQrsC4IVMe_yt_runa0WJ?usp=drive_link"> Title block examples for working drawings</a>.</p> 
+<p>Since the organization and indexing of documents while preparing working drawings is very important, you are expected to use the indicated title blocks as a reference and properly name, number ad index your documents, all drawings, papers and categories. </p>
+
+<p>With the careful observation of these examples of drawings, ad title blocks you can develop checklists for your own drawings. </p>
+
+<iframe src="https://drive.google.com/file/d/1993GHv9u0Mi-t2uW8p4J4fmS55JHzEVS/preview" width="100%" height="640"></iframe>
+
+<h3>Different works of students from past years</h3>
+
+<div class="container">
+<!--
+<h1>Miscellaneous</h1>
+<h3>Different activities like quizzes and interactive activities will be added here. </h3>
+-->
+
+
+<!-- put your exam html here -->
+
+</div>
+
+</div>
+
+    </div>
+
 <script src="script.js"></script>
+<script src="quiz.js"></script>
 
 </body>
 </html>

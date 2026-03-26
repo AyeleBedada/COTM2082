@@ -7,7 +7,56 @@
 
 <title>Quiz 07</title>
 
+
+    <style>
+        /* Basic reset to ensure the layout covers the whole screen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: sans-serif;
+        }
+
+        /* The container for the columns, set to display as flex */
+        .flex-container {
+            display: flex;
+            height: 100vh; /* This makes the container take up the full viewport height */
+            width: 100%;
+        }
+
+        /* Styles for the left column (20%) */
+        .left-column {
+            width: 20%;
+            background-color: #f0f0f0; /* Light gray background for visibility */
+            padding: 20px;
+            box-sizing: border-box; /* Ensures padding and border are included in the 20% width */
+        }
+
+        /* Styles for the right column (80%) */
+        .right-column {
+            width: 80%;
+            background-color: #ffffff; /* White background */
+            padding: 20px;
+            box-sizing: border-box; /* Ensures padding and border are included in the 80% width */
+        }
+
+        /* Optional: Add a media query for responsiveness (stacks columns on small screens) */
+        @media screen and (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+            .left-column, .right-column {
+                width: 100%; /* Stacks the columns vertically */
+                height: auto;
+            }
+        }
+    </style>
+
+
+
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="quiz02.css"> 
+<link rel="stylesheet" href="quiz03.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -54,13 +103,11 @@
 <button onclick="openSubMenu('weekMenu')">Weekly Exercises ▸</button>
 
 
-<a href="weekly-assessment.html">Weekly Assessment</a>
+<a href="weekly-assessment.html">Assessment</a>
 <a href="semester-project.html">Semester Project</a>
 <a href="attendance.html">Attendance</a>
 <a href="instructors.html">For Instructors</a>
-
-<button onclick="openSubMenu('quizMenu')">Miscellaneous ▸</button>
-
+<a href="misc.html">Miscellaneous</a>
 <a href="feedback.html">Your Feedback</a>
 
 </div>
@@ -101,23 +148,6 @@
 <a href="week14.html">Week 14</a>
 <a href="week15.html">Week 15</a>
 <a href="week16.html">Week 16</a>
-
-</div>
-
-
-<div class="menu-panel submenu-panel" id="quizMenu">
-
-<button class="back-btn" onclick="goBack()">◂ Back</button>
-
-<a href="quiz01.html">Quiz 01</a>
-<a href="quiz02.html">Quiz 02</a>
-<a href="quiz03.html">Quiz 03</a>
-<a href="quiz04.html">Quiz 04</a>
-<a href="quiz05.html">Quiz 05</a>
-<a href="quiz06.html">Quiz 06</a>
-<a href="quiz07.html">Quiz 07</a>
-<a href="quiz08.html">Quiz 08</a>
-<a href="exam.html">Final Exam</a>
 
 </div>
 
@@ -183,29 +213,12 @@
 
 <li><a href="weekly-assessment.html">Weekly Assessment</a></li>
 <li><a href="semester-project.html">Semester Project</a></li>
+
+<li><a href="misc.html">Miscellaneous</a></li>
+
+
 <li><a href="attendance.html">Attendance</a></li>
 <li><a href="instructors.html">For Instructors</a></li>
-
-<li class="has-submenu">
-
-<a href="#">Miscellaneous ▾</a>
-
-<ul class="submenu">
-
-<li><a href="quiz01.html">Quiz 01</a></li>
-<li><a href="quiz02.html">Quiz 02</a></li>
-<li><a href="quiz03.html">Quiz 03</a></li>
-<li><a href="quiz04.html">Quiz 04</a></li>
-<li><a href="quiz05.html">Quiz 05</a></li>
-<li><a href="quiz06.html">Quiz 06</a></li>
-<li><a href="quiz07.html">Quiz 07</a></li>
-<li><a href="quiz08.html">Quiz 08</a></li>
-<li><a href="exam.html">Final Exam</a></li>
-
-</ul>
-
-</li>
-
 
 <li><a href="feedback.html">Your Feedback</a></li>
 
@@ -216,18 +229,85 @@
 
 </header>
 
-<div class="container">
+<!-- NAVBAR COPY FROM index.html -->
 
-<h1>Quiz 07</h1>
 
-<p>
-Quiz content will be added here.
-</p>
+<div class="flex-container">
+
+        <div class="left-column">
+
+<!--  <h2>20% Sidebar</h2>
+            <p>This area takes up 20% of the page width on a desktop view. It could be used for navigation or a sidebar.</p> 
+-->
+
+<!-- quiz -->
+<button onclick="openSubMenu('quizMenu')" class="primary-btn">Quizzes ▸</button>
+<div class="menu-panel submenu-panel" id="quizMenu">
+<button class="back-btn"  onclick="goBack()">◂ Back</button>
+<a href="quiz01.html">Quiz 01</a>
+<a href="quiz02.html">Quiz 02</a>
+<a href="quiz03.html">Quiz 03</a>
+<a href="quiz04.html">Quiz 04</a>
+<a href="quiz05.html">Quiz 05</a>
+<a href="quiz06.html">Quiz 06</a>
+<a href="quiz07.html">Quiz 07</a>
+<a href="quiz08.html">Quiz 08</a>
+</div> <br>
+
+<!-- Gallery -->
+<button onclick="openSubMenu('galleryMenu')" class="primary-btn">Gallery ▸</button>
+<div class="menu-panel submenu-panel" id="galleryMenu">
+<button class="back-btn"  onclick="goBack()">◂ Back</button>
+<a href="gallery.html">Exmple works from last year</a>
+</div> <br>
+
+<!-- Verbal Exam -->
+<button onclick="openSubMenu('examMenu')" class="primary-btn">Verbal Exam ▸</button>
+<div class="menu-panel submenu-panel" id="examMenu">
+<button class="back-btn"  onclick="goBack()">◂ Back</button>
+<a href="exam.html">Final Exam</a>
+</div>
+
 
 </div>
 
+<div class="right-column">
+
+<!--  <h2>80% Sidebar</h2> -->
+<h1>Quiz 07</h1>
+
+<p>Coming Soon </p>
+
+<div class="quiz-container">
+    <h3>Quiz on application of renewable material (Such as timber, bamboo, stc.) construction materials and techniques in drawings</h3>
+
+<div class="container">
+<!--
+<h1>Miscellaneous</h1>
+<h3>Different activities like quizzes and interactive activities will be added here. </h3>
+-->
+
+
+<!--
+Coming Soon
+-->
+
+ 
+
+
+</div>
+
+
+
+
+</div>
+
+    </div>
+
 <script src="script.js"></script>
+<script src="quiz03.js"></script>
 
 </body>
 
+</body>
 </html>
