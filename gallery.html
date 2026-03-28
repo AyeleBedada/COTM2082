@@ -50,6 +50,38 @@
                 height: auto;
             }
         }
+
+
+/* Container for the PDF */
+  .pdf-container {
+    width: 100%;
+    height: 600px;
+    overflow: auto; /* Ensures scrollbar is visible */
+    border: 2px solid #333; /* Visual boundary */
+  }
+
+  /* Styling scrollbars (Webkit browsers like Chrome/Safari) */
+  .pdf-container::-webkit-scrollbar {
+    width: 12px;
+  }
+  .pdf-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+  }
+  .pdf-container::-webkit-scrollbar-thumb {
+    background: #e32727; /* Color of the scrollbar thumb */
+    border-radius: 6px;
+  }
+  .pdf-container::-webkit-scrollbar-thumb:hover {
+    background: #e32727;
+  }
+
+  /* Styling the PDF itself */
+  .pdf-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
     </style>
 
 <link rel="stylesheet" href="style.css">
@@ -284,7 +316,7 @@
 
 <p>With the careful observation of these examples of drawings, ad title blocks you can develop checklists for your own drawings. </p>
 
-<iframe src="https://drive.google.com/file/d/1993GHv9u0Mi-t2uW8p4J4fmS55JHzEVS/preview" width="100%" height="640"></iframe>
+<iframe class="pdf-iframe" src="https://drive.google.com/file/d/1993GHv9u0Mi-t2uW8p4J4fmS55JHzEVS/preview"></iframe> <!-- width="100%" height="640" -->
 
 <h3>Different works of students from past years</h3>
 
