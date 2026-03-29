@@ -403,8 +403,8 @@ display:none;
 
 #card{
     width: 500px;
-    height:450px;
-    background-color: #ADD8E6  /* #c0c0c0 or yellow;*/;
+    height:500px;
+    background-color: #add8e6;  /* #c0c0c0 or yellow;*/
     border-radius: 5px;
     cursor: pointer;
     position: fixed;
