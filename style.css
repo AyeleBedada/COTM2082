@@ -402,9 +402,9 @@ display:none;
 /* Float window */
 
 #card{
-    width: 400px;
+    width: 500px;
     height:450px;
-    background-color: yellow; /* #c0c0c0 */;
+    background-color: #ADD8E6  /* #c0c0c0 or yellow;*/;
     border-radius: 5px;
     cursor: pointer;
     position: fixed;

@@ -5,12 +5,88 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Home</title>
+<title>Gallery</title>
+
+
+        <style>
+        /* Basic reset to ensure the layout covers the whole screen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: sans-serif;
+        }
+
+        /* The container for the columns, set to display as flex */
+        .flex-container {
+            display: flex;
+            height: 100vh; /* This makes the container take up the full viewport height */
+            width: 100%;
+        }
+
+        /* Styles for the left column (20%) */
+        .left-column {
+            width: 20%;
+            background-color: #f0f0f0; /* Light gray background for visibility */
+            padding: 20px;
+            box-sizing: border-box; /* Ensures padding and border are included in the 20% width */
+        }
+
+        /* Styles for the right column (80%) */
+        .right-column {
+            width: 80%;
+            background-color: #ffffff; /* White background */
+            padding: 20px;
+            box-sizing: border-box; /* Ensures padding and border are included in the 80% width */
+        }
+
+        /* Optional: Add a media query for responsiveness (stacks columns on small screens) */
+        @media screen and (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+            .left-column, .right-column {
+                width: 100%; /* Stacks the columns vertically */
+                height: auto;
+            }
+        }
+
+
+/* Container for the PDF */
+  .pdf-container {
+    width: 100%;
+    height: 600px;
+    overflow: auto; /* Ensures scrollbar is visible */
+    border: 2px solid #333; /* Visual boundary */
+  }
+
+  /* Styling scrollbars (Webkit browsers like Chrome/Safari) */
+  .pdf-container::-webkit-scrollbar {
+    width: 12px;
+  }
+  .pdf-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+  }
+  .pdf-container::-webkit-scrollbar-thumb {
+    background: #e32727; /* Color of the scrollbar thumb */
+    border-radius: 6px;
+  }
+  .pdf-container::-webkit-scrollbar-thumb:hover {
+    background: #e32727;
+  }
+
+  /* Styling the PDF itself */
+  .pdf-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+    </style>
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style1.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -182,53 +258,84 @@
 
 </header>
 
+<!-- NAVBAR COPY FROM index.html -->
 
 
-<!--  --> 
+<div class="flex-container">
 
+        <div class="left-column">
 
-<div id="floatCont">
-
-<div id="card">
-
- <h3>Based on our brief review of your work so far we would like to bring the following to your attention (to address the issue please take the complete set of working drawing of one of the high-rise building in Addis Ababa as a reference provided at this link: complete working drawing high-rise building).You can use it as a checklist to make sure your drawings are complete:</h3>
-
-<p>  
-1, Your logic of detailing is consistently irrational (your details do not geometrically, with description of material, and construction technique do not match with project you are working on.) <br>
-2, Your annotations and symbols are not complete, accurate and inspired <br>
-3, You have approached the preparation of the reflected ceiling drawings as electrical circuit drawing rather than architectural working drawing. 
-</p> 
-
-<!-- 
-    <h3>As we have acquired one more instructor, the following studio rearrangement is planned for your use starting from this week:</h3>
-<p>
-<span style="background-color: #FFBF65;">Studio 1</span>(Amanuel Alemu) @ E_101: Students from Abdilaziz Nesru to Dagmawi Yosef  <br>
-<span style="background-color: #FFBF65;">Studio 2</span> (Ayele Bedada) @E_104: Students from Dawit Agmuas to Hiyab Tadesse <br>
-<span style="background-color: #FFBF65;">Studio 3</span> (Kumnger Taye) @ E_105: Students from Kaleb petros to Olyad Bahiru <br>
-<span style="background-color: #FFBF65;">Studio 4</span> (Michael Hailegebriel) @ E_106: Students from Oumer Abdurezak to Yoseph Melaku 
-</p>
+<!--  <h2>20% Sidebar</h2>
+            <p>This area takes up 20% of the page width on a desktop view. It could be used for navigation or a sidebar.</p> 
 -->
 
-<button id="myButtonFloat" style="font-size: 1.5em;"> Hide floating  window </button> 
+
+
+
+<!-- quiz -->
+<button onclick="openSubMenu('quizMenu')" class="primary-btn">Quizzes ▸</button>
+<div class="menu-panel submenu-panel" id="quizMenu">
+<button class="back-btn"  onclick="goBack()">◂ Back</button>
+<a href="quiz01.html">Quiz 01</a>
+<a href="quiz02.html">Quiz 02</a>
+<a href="quiz03.html">Quiz 03</a>
+<a href="quiz04.html">Quiz 04</a>
+<a href="quiz05.html">Quiz 05</a>
+<a href="quiz06.html">Quiz 06</a>
+<a href="quiz07.html">Quiz 07</a>
+<a href="quiz08.html">Quiz 08</a>
+</div> <br>
+
+<!-- Gallery -->
+<button onclick="openSubMenu('galleryMenu')" class="primary-btn">Gallery ▸</button>
+<div class="menu-panel submenu-panel" id="galleryMenu">
+<button class="back-btn"  onclick="goBack()">◂ Back</button>
+<a href="gallery.html">Example works from last year</a>
+<a href="high-rise.html">Complete set of working drawing-High-rise building</a>
+
+</div> <br>
+
+<!-- Verbal Exam -->
+<button onclick="openSubMenu('examMenu')" class="primary-btn">Verbal Exam ▸</button>
+<div class="menu-panel submenu-panel" id="examMenu">
+<button class="back-btn"  onclick="goBack()">◂ Back</button>
+<a href="exam.html">Final Exam</a>
+</div>
+
+
 
 </div>
-</div>
-<!--  class="primary-btn"  style="background-color: #0000FF;--> 
 
+<div class="right-column">
 
+<!--  <h2>80% Sidebar</h2> -->
+<h1>A complete set of working drawing </h1>
+
+<h1>Use the following complete set of working drawing of one of the high-rise building in Addis Ababa</h1>
+
+<p>With a careful observation of the complete set of working drawing of a building given below make sure to get inspired to update your shortcomings listed below (you can also use it as a checklist for your project to make sure all elements of your drawings in place in your presentation: symbols, dimensions, hatches and the like ):</p> 
+
+<iframe src="https://drive.google.com/file/d/1Ad2_AwhSyulc7j9lk5ZBwyXInZK51IF6/preview" width="100%" height="640"></iframe>
+
+<h3>A complete set of working drawing</h3>
 
 <div class="container">
+<!--
+<h1>Miscellaneous</h1>
+<h3>Different activities like quizzes and interactive activities will be added here. </h3>
+-->
 
-<h1>Welcome to the course Construction Drafting and Working Drawing (COTM2082)!</h1>
 
-<img src="masonary.jpg" alt="Description of image" width=100%>
-
-<a class="primary-btn" href="introduction.html">Enter the Course</a>
+<!-- put your exam html here -->
 
 </div>
 
+</div>
+
+    </div>
+
 <script src="script.js"></script>
-<script src="float.js"> </script>
+<script src="quiz.js"></script>
 
 </body>
 </html>
