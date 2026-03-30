@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Checklist</title>
+
+
+    <style>
+        /* Basic reset to ensure the layout covers the whole screen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: sans-serif;
+        }
+
+        /* The container for the columns, set to display as flex */
+        .flex-container {
+            display: flex;
+            height: 100vh; /* This makes the container take up the full viewport height */
+            width: 100%;
+        }
+
+        /* Styles for the left column (20%) */
+        .left-column {
+            width: 20%;
+            background-color: #f0f0f0; /* Light gray background for visibility */
+            padding: 20px;
+            box-sizing: border-box; /* Ensures padding and border are included in the 20% width */
+        }
+
+        /* Styles for the right column (80%) */
+        .right-column {
+            width: 80%;
+            background-color: #ffffff; /* White background */
+            padding: 20px;
+            box-sizing: border-box; /* Ensures padding and border are included in the 80% width */
+        }
+
+        /* Optional: Add a media query for responsiveness (stacks columns on small screens) */
+        @media screen and (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+            .left-column, .right-column {
+                width: 100%; /* Stacks the columns vertically */
+                height: auto;
+            }
+        }
+    </style>
+
+
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="style-check.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<div class="mobile-bottom-nav">
+
+<a href="index.html">Home</a>
+
+<a href="lectures.html">Lectures</a>
+
+<a href="weekly-exercises.html">Exercises</a>
+
+<a href="weekly-assessment.html">Assessment</a>
+
+<a href="semester-project.html">Semester Project</a>
+
+<a href="feedback.html">Feedback</a>
+
+</div>
+
+
+<body>
+
+
+<!-- NAVBAR COPY FROM index.html -->
+
+<header>
+
+<div id="mobileMenu" class="mobile-menu">
+
+<div class="menu-panel" id="mainMenu">
+
+<a href="index.html">Home</a>
+<a href="introduction.html">Introduction</a>
+<a href="syllabus.html">Syllabus</a>
+
+<button onclick="openSubMenu('lectureMenu')">Lectures ▸</button>
+<button onclick="openSubMenu('weekMenu')">Weekly Exercises ▸</button>
+
+
+<a href="weekly-assessment.html">Assessment</a>
+<a href="semester-project.html">Semester Project</a>
+<a href="attendance.html">Attendance</a>
+<a href="instructors.html">For Instructors</a>
+<a href="misc.html">Miscellaneous</a>
+<a href="feedback.html">Your Feedback</a>
+
+</div>
+
+
+<div class="menu-panel submenu-panel" id="lectureMenu">
+
+<button class="back-btn" onclick="goBack()">◂ Back</button>
+
+<a href="lecture1.html">Lecture 1</a>
+<a href="lecture2.html">Lecture 2</a>
+<a href="lecture3.html">Lecture 3</a>
+<a href="lecture4.html">Lecture 4</a>
+<a href="lecture5.html">Lecture 5</a>
+<a href="lecture6.html">Lecture 6</a>
+<a href="lecture7.html">Lecture 7</a>
+<a href="lecture8.html">Lecture 8</a>
+
+</div>
+
+<div class="menu-panel submenu-panel" id="weekMenu">
+
+<button class="back-btn" onclick="goBack()">◂ Back</button>
+
+<a href="week01.html">Week 01</a>
+<a href="week02.html">Week 02</a>
+<a href="week03.html">Week 03</a>
+<a href="week04.html">Week 04</a>
+<a href="week05.html">Week 05</a>
+<a href="week06.html">Week 06</a>
+<a href="week07.html">Week 07</a>
+<a href="week08.html">Week 08</a>
+<a href="week09.html">Week 09</a>
+<a href="week10.html">Week 10</a>
+<a href="week11.html">Week 11</a>
+<a href="week12.html">Week 12</a>
+<a href="week13.html">Week 13</a>
+<a href="week14.html">Week 14</a>
+<a href="week15.html">Week 15</a>
+<a href="week16.html">Week 16</a>
+
+</div>
+
+</div>
+
+
+
+<div class="nav-container">
+
+<div class="logo">COTM2082</div>
+<button id="darkToggle" onclick="toggleDarkMode()">🌙</button>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav>
+
+<ul id="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="syllabus.html">Syllabus</a></li>
+
+<li class="has-submenu">
+<a href="#">Lectures ▾</a>
+
+<ul class="submenu">
+<li><a href="lecture1.html">Lecture 1</a></li>
+<li><a href="lecture2.html">Lecture 2</a></li>
+<li><a href="lecture3.html">Lecture 3</a></li>
+<li><a href="lecture4.html">Lecture 4</a></li>
+<li><a href="lecture5.html">Lecture 5</a></li>
+<li><a href="lecture6.html">Lecture 6</a></li>
+<li><a href="lecture7.html">Lecture 7</a></li>
+<li><a href="lecture8.html">Lecture 8</a></li>
+</ul>
+</li>
+
+<li class="has-submenu">
+
+<a href="#">Weekly Exercises ▸</a>
+
+<ul class="submenu">
+
+<li><a href="week01.html">Week 01</a></li>
+<li><a href="week02.html">Week 02</a></li>
+<li><a href="week03.html">Week 03</a></li>
+<li><a href="week04.html">Week 04</a></li>
+<li><a href="week05.html">Week 05</a></li>
+<li><a href="week06.html">Week 06</a></li>
+<li><a href="week07.html">Week 07</a></li>
+<li><a href="week08.html">Week 08</a></li>
+<li><a href="week09.html">Week 09</a></li>
+<li><a href="week10.html">Week 10</a></li>
+<li><a href="week11.html">Week 11</a></li>
+<li><a href="week12.html">Week 12</a></li>
+<li><a href="week13.html">Week 13</a></li>
+<li><a href="week14.html">Week 14</a></li>
+<li><a href="week15.html">Week 15</a></li>
+<li><a href="week16.html">Week 16</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="weekly-assessment.html">Weekly Assessment</a></li>
+<li><a href="semester-project.html">Semester Project</a></li>
+
+<li><a href="misc.html">Miscellaneous</a></li>
+
+
+<li><a href="attendance.html">Attendance</a></li>
+<li><a href="instructors.html">For Instructors</a></li>
+
+<li><a href="feedback.html">Your Feedback</a></li>
+
+</ul>
+
+</nav>
+</div>
+
+</header>
+
+<!-- NAVBAR COPY FROM index.html -->
+
+
+<div class="flex-container">
+
+        <div class="left-column">
+
+<!--  <h2>20% Sidebar</h2>
+            <p>This area takes up 20% of the page width on a desktop view. It could be used for navigation or a sidebar.</p> 
+-->
+
+<!-- quiz -->
+<button onclick="openSubMenu('quizMenu')" class="primary-btn">Quizzes ▸</button>
+<div class="menu-panel submenu-panel" id="quizMenu">
+<button class="back-btn"  onclick="goBack()">◂ Back</button>
+<a href="quiz01.html">Quiz 01</a>
+<a href="quiz02.html">Quiz 02</a>
+<a href="quiz03.html">Quiz 03</a>
+<a href="quiz04.html">Quiz 04</a>
+<a href="quiz05.html">Quiz 05</a>
+<a href="quiz06.html">Quiz 06</a>
+<a href="quiz07.html">Quiz 07</a>
+<a href="quiz08.html">Quiz 08</a>
+</div> <br>
+
+<!-- Gallery -->
+<button onclick="openSubMenu('galleryMenu')" class="primary-btn">Gallery ▸</button>
+<div class="menu-panel submenu-panel" id="galleryMenu">
+<button class="back-btn"  onclick="goBack()">◂ Back</button>
+<a href="past-works.html">Example works from last year</a>
+<a href="high-rise.html">Complete set of working drawing-High-rise building </a>
+<a href="checklist.html">Working drawing checklist </a>
+</div> <br>
+
+<!-- checklist -->
+<button onclick="openSubMenu('examMenu')" class="primary-btn">Verbal Exam ▸</button>
+<div class="menu-panel submenu-panel" id="examMenu">
+<button class="back-btn"  onclick="goBack()">◂ Back</button>
+<a href="exam.html">Final Exam</a>
+</div>
+
+
+
+</div>
+
+<div class="right-column">
+
+<!--  <h2>80% Sidebar</h2> -->
+
+
+<h1>Construction Drawing Checklist Dashboard</h1>
+
+<!-- FILTERS -->
+<div class="filters">
+    <button onclick="filterDiscipline('all')">All</button>
+    <button onclick="filterDiscipline('arch')">Architectural</button>
+    <button onclick="filterDiscipline('struct')">Structural</button>
+    <button onclick="filterDiscipline('mep')">MEP</button>
+    <button onclick="resetChecklist()">Reset Checklist</button>
+</div>
+
+<input type="text" id="search" placeholder="Search..." onkeyup="searchItems()">
+
+<!-- SCOREBOARD -->
+<div class="scoreboard">
+    <div>Total Score: <span id="totalScore"></span></div>
+    <div>Architectural: <span id="archScore"></span></div>
+    <div>Structural: <span id="structScore"></span></div>
+    <div>MEP: <span id="mepScore"></span></div>
+</div>
+
+<div class="progress-bar"><div id="progress"></div></div>
+
+<!--
+ <div id="warnings" class="warning"></div> 
+ <div id="analytics" class="analytics"></div> -->
+
+
+
+<!-- ================= GENERAL ================= -->
+<div class="category" data-discipline="arch">
+<h2>General Drawing Control</h2>
+
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Title block includes client name</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Title block includes project name</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Drawing title clearly defined</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Drawing number/index correct</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Revision number and history included</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Scale clearly indicated</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> North arrow included</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Drawing date included</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Author / checker indicated</label>
+<label><input type="checkbox" data-weight="3" data-discipline="arch" onchange="update()"> Company identity consistent</label>
+
+</div>
+
+<!-- ================= ANNOTATIONS ================= -->
+<div class="category" data-discipline="arch">
+<h2>Annotations & Symbols</h2>
+
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> All dimensions readable and consistent</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Dimension hierarchy correct</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Section markers correct</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Elevation markers correct</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Grid lines labeled correctly</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Levels annotated</label>
+<label><input type="checkbox" data-weight="3" data-discipline="arch" onchange="update()"> Line weights standard</label>
+<label><input type="checkbox" data-weight="3" data-discipline="arch" onchange="update()"> Hatching correct</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Symbols match legend</label>
+<label><input type="checkbox" data-weight="3" data-discipline="arch" onchange="update()"> Text readable</label>
+
+</div>
+
+<!-- ================= NOTES ================= -->
+<div class="category" data-discipline="arch">
+<h2>Notes & Specifications</h2>
+
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> General notes included</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Material specs defined</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Construction notes included</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Code compliance notes</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Fire safety notes</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Accessibility notes</label>
+<label><input type="checkbox" data-weight="3" data-discipline="arch" onchange="update()"> Waterproofing notes</label>
+<label><input type="checkbox" data-weight="3" data-discipline="arch" onchange="update()"> Insulation specs</label>
+
+</div>
+
+<!-- ================= SCHEDULES ================= -->
+<div class="category" data-discipline="arch">
+<h2>Schedules</h2>
+
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Door schedule complete</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Window schedule complete</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Finishes schedule</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Room data sheet</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Schedule references match drawings</label>
+
+</div>
+
+<!-- ================= SITE ================= -->
+<div class="category" data-discipline="arch">
+<h2>Site & External Works</h2>
+
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Site boundary defined</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Setbacks shown</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Access roads shown</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Drainage direction shown</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Landscaping shown</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> External levels coordinated</label>
+
+</div>
+
+<!-- ================= FLOOR PLANS ================= -->
+<div class="category" data-discipline="arch">
+<h2>Floor Plans</h2>
+
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Grid alignment correct</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Wall thicknesses correct</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Room dimensions complete</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Overall dimensions shown</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Door sizes correct</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Window sizes correct</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Stair compliant</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Headroom verified</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Fire escape compliant</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Accessibility compliant</label>
+<label><input type="checkbox" data-weight="3" data-discipline="arch" onchange="update()"> Furniture layout</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Sanitary fixtures coordinated</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Section lines placed</label>
+
+</div>
+
+<div class="category" data-discipline="arch">
+<h2>Architectural – Elevations</h2>
+
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> All levels shown (FFL, SSL, ridge)</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Openings align with plans</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Materials indicated</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> External finishes consistent</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Roof slope correct</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Drainage elements shown</label>
+
+</div>
+
+<div class="category" data-discipline="arch">
+<h2>Architectural – Sections & Details</h2>
+
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Wall build-ups complete</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Roof build-up complete</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> Floor build-up complete</label>
+<label><input type="checkbox" data-weight="5" data-discipline="arch" onchange="update()"> DPC shown correctly</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Waterproofing detailed</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Thermal insulation continuous</label>
+<label><input type="checkbox" data-weight="4" data-discipline="arch" onchange="update()"> Junction details resolved</label>
+
+</div>
+
+
+<!-- ================= STRUCTURAL ================= -->
+<div class="category" data-discipline="struct">
+<h2>Structural</h2>
+
+<label><input type="checkbox" data-weight="5" data-discipline="struct" onchange="update()"> Structural grid matches architecture</label>
+<label><input type="checkbox" data-weight="5" data-discipline="struct" onchange="update()"> Column positions coordinated</label>
+<label><input type="checkbox" data-weight="5" data-discipline="struct" onchange="update()"> Beam layout correct</label>
+<label><input type="checkbox" data-weight="5" data-discipline="struct" onchange="update()"> Slab thickness defined</label>
+<label><input type="checkbox" data-weight="5" data-discipline="struct" onchange="update()"> Foundation system defined</label>
+<label><input type="checkbox" data-weight="4" data-discipline="struct" onchange="update()"> Reinforcement details included</label>
+<label><input type="checkbox" data-weight="4" data-discipline="struct" onchange="update()"> Structural sections provided</label>
+<label><input type="checkbox" data-weight="4" data-discipline="struct" onchange="update()"> Load paths clear</label>
+<label><input type="checkbox" data-weight="5" data-discipline="struct" onchange="update()"> Foundation dimensions detailed</label>
+<label><input type="checkbox" data-weight="4" data-discipline="struct" onchange="update()"> Structural notes included</label>
+
+</div>
+
+<!-- ================= MEP ================= -->
+<div class="category" data-discipline="mep">
+<h2>MEP</h2>
+
+<label><input type="checkbox" data-weight="5" data-discipline="mep" onchange="update()"> Electrical layout complete</label>
+<label><input type="checkbox" data-weight="5" data-discipline="mep" onchange="update()"> Lighting layout coordinated</label>
+<label><input type="checkbox" data-weight="5" data-discipline="mep" onchange="update()"> Plumbing layout complete</label>
+<label><input type="checkbox" data-weight="5" data-discipline="mep" onchange="update()"> Drainage system defined</label>
+<label><input type="checkbox" data-weight="4" data-discipline="mep" onchange="update()"> HVAC layout coordinated</label>
+<label><input type="checkbox" data-weight="4" data-discipline="mep" onchange="update()"> Equipment locations defined</label>
+<label><input type="checkbox" data-weight="4" data-discipline="mep" onchange="update()"> Clash detection resolved</label>
+<label><input type="checkbox" data-weight="5" data-discipline="mep" onchange="update()"> Water supply system defined</label>
+<label><input type="checkbox" data-weight="4" data-discipline="mep" onchange="update()"> Duct routing coordinated</label>
+
+<br>
+<br>
+<button onclick="exportPDF()">Export PDF</button>
+
+</div>
+
+<script src="script-check.js"></script>
+<script src="script.js"></script>
+<script src="quiz.js"></script>
+
+</body>
+</html>
