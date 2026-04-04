@@ -402,16 +402,16 @@ display:none;
 /* Float window */
 
 #card{
-    width: 500px;
-    height:500px;
-    background-color: #add8e6;  /* #c0c0c0 or yellow;*/
+    width: 400px;
+    height:400px;
+    background-color: green;  /* #c0c0c0 or yellow; or #add8e6; or green; */
     border-radius: 5px;
     cursor: pointer;
     position: fixed;
     padding: 10px;
     padding-top: 25px;
     text-align: left;
-     color: #000000;
+    color: #000000; /* #000000; or white*/
 }
 
 #myButtonFloat{
