@@ -5,10 +5,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Gallery</title>
+<title>Verbal Exam</title>
 
 
-        <style>
+    <style>
         /* Basic reset to ensure the layout covers the whole screen */
         body, html {
             margin: 0;
@@ -50,39 +50,9 @@
                 height: auto;
             }
         }
-
-
-/* Container for the PDF */
-  .pdf-container {
-    width: 100%;
-    height: 600px;
-    overflow: auto; /* Ensures scrollbar is visible */
-    border: 2px solid #333; /* Visual boundary */
-  }
-
-  /* Styling scrollbars (Webkit browsers like Chrome/Safari) */
-  .pdf-container::-webkit-scrollbar {
-    width: 12px;
-  }
-  .pdf-container::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Color of the track */
-  }
-  .pdf-container::-webkit-scrollbar-thumb {
-    background: #e32727; /* Color of the scrollbar thumb */
-    border-radius: 6px;
-  }
-  .pdf-container::-webkit-scrollbar-thumb:hover {
-    background: #e32727;
-  }
-
-  /* Styling the PDF itself */
-  .pdf-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
     </style>
+
+
 
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="style1.css">
@@ -112,12 +82,10 @@
 </div>
 
 
-<body oncontextmenu="return false;">
+<body>
 
-<!-- <body oncontextmenu="return false;> -->
 
 <!-- NAVBAR COPY FROM index.html -->
-
 
 <header>
 
@@ -296,8 +264,8 @@
 <div class="menu-panel submenu-panel" id="galleryMenu">
 <button class="back-btn"  onclick="goBack()">◂ Back</button>
 <a href="past-works.html">Example works from last year</a>
-<a href="high-rise.html">Complete set of working drawings-High-rise building</a>
-<a href="checklist.html">Working drawings checklist </a>
+<a href="high-rise.html">Complete set of working drawing-High-rise building </a>
+<a href="checklist.html">Working drawing checklist </a>
 </div> <br>
 
 <!-- Verbal Exam -->
@@ -305,7 +273,7 @@
 <div class="menu-panel submenu-panel" id="examMenu">
 <button class="back-btn"  onclick="goBack()">◂ Back</button>
 <a href="exam.html">Final Exam</a>
-</div><br>
+</div> <br>
 
 <!-- Total marks -->
 <button onclick="openSubMenu('totalMarksMenu')" class="primary-btn">Total Marks ▸</button>
@@ -314,28 +282,19 @@
 <a href="total.html">Total Marks</a>
 </div>
 
-
-
 </div>
 
 <div class="right-column">
 
 <!--  <h2>80% Sidebar</h2> -->
-<h1>A complete set of working drawings </h1>
-
-<h1>Use the following complete set of working drawings of one of the high-rise buildings in Addis Ababa</h1>
-
-<p>With a careful observation of the complete set of working drawings of a building given below make sure to be inspired/ informed to update your shortcomings listed below. You can also use it as a checklist for your project to make sure all elements of your drawings are in place in your presentation: (symbols, dimensions, hatches and the like):</p> 
-
- <!-- <iframe src="https://drive.google.com/file/d/1Ad2_AwhSyulc7j9lk5ZBwyXInZK51IF6/preview" width="100%" height="640"></iframe> -->
-
-<!-- <iframe src="viewer.html?file=high-rise-1.pdf" width="100%" height="800px"></iframe> -->
-
-<embed src="high-rise-1.pdf#toolbar=0" type="application/pdf" width="100%" height="800px" />
-
-
-
-<h3>A complete set of working drawings</h3>
+<h1>Your General Course Total Marks</h1>
+<h1>Attendance, weekly assessment, Seminar assessment, Final Project assessment, and Verbal Exam assessment </h1>
+<p>The total of you score: 
+(1)attendance: 10%
+(2)weekly assessment: 30%
+(3)Seminar assessment: 10%
+(4)Final Project assessment: 30% and
+(5)Verbal Exam assessment: 20% will be provided below:</p>
 
 <div class="container">
 <!--
@@ -344,7 +303,7 @@
 -->
 
 
-<!-- put your exam html here -->
+<!-- place your exam html here-->
 
 </div>
 
@@ -353,25 +312,7 @@
     </div>
 
 <script src="script.js"></script>
-<!-- <script src="quiz.js"></script> -->
-
-<script>
-document.addEventListener('keydown', function(e) {
-  if (e.ctrlKey && (e.key === 's' || e.key === 'p')) {
-    e.preventDefault();
-  }
-});
-</script>
-
-<!--
-<script>
-document.addEventListener('keydown', function(e) {
-  if (e.ctrlKey && (e.key === 's' || e.key === 'p')) {
-    e.preventDefault();
-  }
-});
-</script>
--->
+<script src="quiz.js"></script>
 
 </body>
 </html>
