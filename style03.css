@@ -41,6 +41,19 @@ h1 {
     background-color: #f7c5c5;
 }
 
+/*
+button {
+    display: block;
+    margin: 6px 0; /
+    padding: 8px; 
+    cursor: pointer;
+    width: 100%;
+}
+*/
+button:hover {
+    opacity: 0.85;
+}
+
 #submit {
     display: block;
     margin: 20px auto;
