@@ -403,7 +403,7 @@ display:none;
 
 #card{
     width: 400px;
-    height:370px;
+    height:410px;
     background-color: #614772;  /* #c0c0c0 or yellow; or #add8e6; or green; or #614772; */
     border-radius: 5px;
     cursor: pointer;
