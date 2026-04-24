@@ -404,7 +404,7 @@ display:none;
 #card{
     width: 400px;
     height:370px;
-    background-color: green;  /* #c0c0c0 or yellow; or #add8e6; or green; */
+    background-color: #614772;  /* #c0c0c0 or yellow; or #add8e6; or green; or #614772; */
     border-radius: 5px;
     cursor: pointer;
     position: fixed;
@@ -428,4 +428,4 @@ display:none;
 /* For compatibility with older Firefox versions (pre-61) */
 ::-moz-selection {
   background-color: #ff0000;
-  color: #ffffff;
+  color: #ffffff; }
