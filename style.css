@@ -403,7 +403,7 @@ display:none;
 
 #card{
     width: 420px;
-    height:480px;
+    height:500px;
     background-color: #800000;  /* #c0c0c0 or yellow; or #add8e6; or green; or #614772; or https://www.computerhope.com/htmcolor.htm */
     border-radius: 5px;
     cursor: pointer;
