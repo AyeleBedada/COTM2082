@@ -53,10 +53,10 @@
     </style>
 
 
-
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="quiz02.css"> 
 <link rel="stylesheet" href="quiz03.css">
+<link rel="stylesheet" href="quiz07.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -292,29 +292,47 @@
 <!--  <h2>80% Sidebar</h2> -->
 <h1>Quiz 07</h1>
 
-<p>Coming Soon </p>
-
 <div class="quiz-container">
     <h3>Quiz on application of renewable material (Such as timber, bamboo, stc.) construction materials and techniques in drawings</h3>
 
 <div class="container">
-<!--
-<h1>Miscellaneous</h1>
-<h3>Different activities like quizzes and interactive activities will be added here. </h3>
--->
 
+<div id="rmQuizApp">
 
-<!--
-Coming Soon
--->
+  <div class="rmq-score-panel">
 
+    <div class="rmq-score-box">
+      <span>Score</span>
+      <strong id="rmqScore">0</strong>
+    </div>
+
+    <div class="rmq-score-box">
+      <span>Answered</span>
+      <strong id="rmqAnswered">0 / 50</strong>
+    </div>
+
+    <div class="rmq-score-box">
+      <span>Correct</span>
+      <strong id="rmqCorrect">0</strong>
+    </div>
+
+  </div>
+
+  <div id="rmqQuestions"></div>
+
+  <div class="rmq-submit-wrap">
+    <button id="rmqSubmitBtn">
+      Submit Final Quiz
+    </button>
+  </div>
+
+  <div id="rmqFinalResult" class="rmq-final-result"></div>
+
+</div>
  
 
 
 </div>
-
-
-
 
 </div>
 
@@ -322,6 +340,7 @@ Coming Soon
 
 <script src="script.js"></script>
 <script src="quiz03.js"></script>
+<script src="quiz07.js"></script>
 
 </body>
 

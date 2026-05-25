@@ -1,0 +1,156 @@
+#rmQuizApp *{
+  box-sizing:border-box;
+}
+
+#rmQuizApp{
+  font-family:Arial,sans-serif;
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
+  background:#f4f6f8;
+  color:#222;
+}
+
+#rmQuizApp .rmq-header{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+#rmQuizApp .rmq-header h1{
+  margin-bottom:10px;
+}
+
+#rmQuizApp .rmq-subtitle{
+  color:#555;
+}
+
+#rmQuizApp .rmq-score-panel{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  position:sticky;
+  top:10px;
+  z-index:100;
+  background:#f4f6f8;
+  padding-bottom:15px;
+  margin-bottom:20px;
+}
+
+#rmQuizApp .rmq-score-box{
+  background:#fff;
+  border-radius:12px;
+  padding:15px 20px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+  min-width:140px;
+}
+
+#rmQuizApp .rmq-score-box span{
+  display:block;
+  color:#666;
+  margin-bottom:5px;
+}
+
+#rmQuizApp .rmq-score-box strong{
+  font-size:22px;
+}
+
+#rmQuizApp .rmq-card{
+  background:#fff;
+  border-radius:16px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+#rmQuizApp .rmq-meta{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:12px;
+  font-size:13px;
+  color:#666;
+}
+
+#rmQuizApp .rmq-simple{
+  background:#eef3f7;
+  padding:10px;
+  border-radius:8px;
+}
+
+#rmQuizApp .rmq-options{
+  display:grid;
+  gap:12px;
+  margin-top:20px;
+}
+
+#rmQuizApp .rmq-option{
+  text-align:left;
+  border:none;
+  border-radius:10px;
+  padding:14px;
+  background:#edf1f5;
+  cursor:pointer;
+  transition:0.2s;
+  font-size:15px;
+}
+
+#rmQuizApp .rmq-option:hover{
+  background:#dde5ec;
+}
+
+#rmQuizApp .rmq-option.correct{
+  background:#1e8e3e;
+  color:#fff;
+}
+
+#rmQuizApp .rmq-option.wrong{
+  background:#d93025;
+  color:#fff;
+}
+
+#rmQuizApp .rmq-feedback{
+  margin-top:15px;
+}
+
+#rmQuizApp .rmq-correct-box,
+#rmQuizApp .rmq-wrong-box{
+  padding:15px;
+  border-radius:10px;
+  line-height:1.6;
+}
+
+#rmQuizApp .rmq-correct-box{
+  background:#e6f4ea;
+}
+
+#rmQuizApp .rmq-wrong-box{
+  background:#fce8e6;
+}
+
+#rmQuizApp .rmq-submit-wrap{
+  text-align:center;
+  margin:40px 0;
+}
+
+#rmQuizApp #rmqSubmitBtn{
+  border:none;
+  background:#111827;
+  color:#fff;
+  padding:16px 28px;
+  border-radius:12px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+#rmQuizApp .rmq-final-result{
+  background:#fff;
+  border-radius:16px;
+  padding:25px;
+  margin-top:20px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+@media(max-width:768px){
+  #rmQuizApp .rmq-score-panel{
+    flex-direction:column;
+  }
+}
