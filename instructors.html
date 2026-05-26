@@ -8,6 +8,7 @@
 <title>Instructor</title>
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="task.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -206,7 +207,68 @@
 
 </div>
 
+<div id="taskTrackerApp">
+
+  <div class="tt-header" style="text-align:left;">
+    <h1>Lecturers' Task Completion</h1>
+    <p class="tt-subtitle">
+      Lecturer Assessment Task Completion as of May 26, 2026.
+    </p>
+  </div>
+
+  <div class="tt-legend-wrap">
+
+    <div class="tt-legend-item">
+      <span class="tt-badge tt-complete">✓</span>
+      <span>Marks Submitted</span>
+    </div>
+
+    <div class="tt-legend-item">
+      <span class="tt-badge tt-missing">✗</span>
+      <span>Marks Not Submitted</span>
+    </div>
+
+    <div class="tt-legend-item">
+      <span class="tt-badge tt-warning">!</span>
+      <span>
+        Mark must be shown to students before the optional exam (May 29, 2026)
+      </span>
+    </div>
+
+  </div>
+
+  <div class="tt-table-wrap">
+
+    <table class="tt-table">
+
+      <thead>
+        <tr>
+          <th>Name of Lecturer</th>
+          <th>Section</th>
+          <th>Attendance<br>10%</th>
+          <th>01 Report<br>5%</th>
+          <th>Week 02–05<br>10%</th>
+          <th>Week 06–09<br>10%</th>
+          <th>Week 10–11<br>5%</th>
+          <th>Seminar<br>10%</th>
+          <th>Verbal Exam<br>20%</th>
+          <th>Final Project<br>30%</th>
+          <th>Optional Exam</th>
+          <th>Completion</th>
+        </tr>
+      </thead>
+
+      <tbody id="ttTableBody"></tbody>
+
+    </table>
+
+  </div>
+
+</div>
+<br> <br> <br> <br> <br> <br>
+
 <script src="script.js"></script>
+<script src="task.js"></script>
 
 </body>
 </html>
