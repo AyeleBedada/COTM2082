@@ -404,14 +404,14 @@ display:none;
 #card{
     width: 420px;
     height:400px;
-    background-color: #4D4746;  /* #F54927;  #c0c0c0; or yellow; or #add8e6; or green; or #614772; or #800000; or #D891EF; or darkgray; or https://www.computerhope.com/htmcolor.htm */
+    background-color: #564d24;  /* #4D4746;  #F54927;  #c0c0c0; or yellow; or #add8e6; or green; or #614772; or #800000; or #D891EF; or darkgray; or https://www.computerhope.com/htmcolor.htm */
     border-radius: 5px;
     cursor: pointer;
     position: fixed;
     padding: 10px;
     padding-top: 25px;
     text-align: left;
-    color: #000000; /* #000000; or white*/
+    color: #d6c567; /* #000000; or white*/
 }
 
 #myButtonFloat{
