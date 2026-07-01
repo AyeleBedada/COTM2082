@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Construction Technology & Management Challenge</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+
+
+</head>
+
+<body>
+
+<div id="background"></div>
+
+<div class="container">
+
+<header>
+
+<h1>
+🏗️ Construction Technology & Management
+</h1>
+
+<h2>
+Curriculum Challenge
+</h2>
+
+<p class="subtitle">
+Master the entire undergraduate curriculum through an interactive academic game.
+</p>
+
+</header>
+
+
+
+<section id="welcomeScreen" class="screen active">
+
+<div class="welcomeCard">
+
+<h3>Welcome!</h3>
+
+<p>
+
+Test how well you know every course in the Construction Technology & Management curriculum.
+
+Questions are generated from the official curriculum and cover:
+
+</p>
+
+<ul>
+
+<li>Course Name</li>
+
+<li>Course Code</li>
+
+<li>ECTS</li>
+
+<li>Prerequisites</li>
+
+<li>Year</li>
+
+<li>Semester</li>
+
+</ul>
+
+<button id="startBtn">
+▶ Start Challenge
+</button>
+
+</div>
+
+</section>
+
+
+
+<section id="gameScreen" class="screen">
+
+<div class="topPanel">
+
+<div class="scoreBox">
+
+<div>
+Score
+</div>
+
+<span id="score">
+0
+</span>
+
+</div>
+
+<div class="scoreBox">
+
+<div>
+XP
+</div>
+
+<span id="xp">
+0
+</span>
+
+</div>
+
+<div class="scoreBox">
+
+<div>
+Question
+</div>
+
+<span id="questionCounter">
+1
+</span>
+
+</div>
+
+</div>
+
+
+
+<div class="progressArea">
+
+<svg id="progressMap"
+viewBox="0 0 800 120">
+
+<line
+x1="50"
+y1="60"
+x2="750"
+y2="60"
+class="track"/>
+
+<line
+id="progressLine"
+x1="50"
+y1="60"
+x2="50"
+y2="60"
+class="progress"/>
+
+<circle cx="50" cy="60" r="10"/>
+
+<circle cx="190" cy="60" r="10"/>
+
+<circle cx="330" cy="60" r="10"/>
+
+<circle cx="470" cy="60" r="10"/>
+
+<circle cx="610" cy="60" r="10"/>
+
+<circle cx="750" cy="60" r="10"/>
+
+<text x="40" y="95">Y1</text>
+
+<text x="180" y="95">Y2</text>
+
+<text x="320" y="95">Y3</text>
+
+<text x="460" y="95">Y4</text>
+
+<text x="600" y="95">Y5</text>
+
+<text x="720" y="95">Finish</text>
+
+</svg>
+
+</div>
+
+
+
+<div class="questionCard">
+
+<div id="questionType" class="questionType">
+
+Course Question
+
+</div>
+
+<h2 id="question">
+
+Loading...
+
+</h2>
+
+<div
+id="choices"
+class="choices">
+
+</div>
+
+</div>
+
+
+
+<div
+id="feedback"
+class="feedback hidden">
+
+<h3 id="resultTitle"></h3>
+
+<p id="explanation"></p>
+
+<button id="nextBtn">
+
+Next Question →
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<section
+id="finishScreen"
+class="screen">
+
+<div class="finishCard">
+
+<h2>
+
+🎓 Challenge Completed
+
+</h2>
+
+<h3 id="finalScore">
+
+0
+
+</h3>
+
+<p id="summary">
+
+</p>
+
+<button id="restartBtn">
+
+Play Again
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+Construction Technology & Management Academic Challenge
+
+</footer>
+
+</div>
+
+<script src="courses.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

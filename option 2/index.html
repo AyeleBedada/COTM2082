@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta
+name="description"
+content="Construction Technology and Management Academic Challenge">
+
+<meta
+name="keywords"
+content="Construction, Quiz, University, CoTM, Academic Game">
+
+<meta
+name="author"
+content="Ayele Bedada">
+
+<title>
+
+CoTM Academic Challenge
+
+</title>
+
+<link
+rel="stylesheet"
+href="style.css">
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/quiz.css">
+<link rel="stylesheet" href="css/curriculum.css">
+<link rel="stylesheet" href="css/analytics.css">
+<link rel="stylesheet" href="css/modal.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- =================================================== -->
+<!-- LOADING SCREEN                                      -->
+<!-- =================================================== -->
+
+<div id="loadingScreen">
+
+    <div class="loader">
+
+        <div class="loaderRing"></div>
+
+        <div class="loaderText">
+
+            CoTM Academic Challenge
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =================================================== -->
+<!-- BACKGROUND -->
+<!-- =================================================== -->
+
+<div id="animatedBackground">
+
+<div class="bgCircle c1"></div>
+<div class="bgCircle c2"></div>
+<div class="bgCircle c3"></div>
+<div class="bgCircle c4"></div>
+<div class="bgCircle c5"></div>
+
+</div>
+
+<!-- =================================================== -->
+<!-- HEADER -->
+<!-- =================================================== -->
+
+<header id="topHeader">
+
+<div class="logoArea">
+
+<div class="logoIcon">
+
+<i class="fa-solid fa-building-columns"></i>
+
+</div>
+
+<div>
+
+<h1>
+
+CoTM Academic Challenge
+
+</h1>
+
+<p>
+
+Interactive Curriculum Mastery Platform
+
+</p>
+
+</div>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>
+
+<button id="dashboardButton">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</button>
+
+</li>
+
+<li>
+
+<button id="gameButton">
+
+<i class="fa-solid fa-gamepad"></i>
+
+Play
+
+</button>
+
+</li>
+
+<li>
+
+<button id="curriculumButton">
+
+<i class="fa-solid fa-book-open"></i>
+
+Curriculum
+
+</button>
+
+</li>
+
+<li>
+
+<button id="achievementButton">
+
+<i class="fa-solid fa-trophy"></i>
+
+Achievements
+
+</button>
+
+</li>
+
+<li>
+
+<button id="analyticsButton">
+
+<i class="fa-solid fa-chart-column"></i>
+
+Analytics
+
+</button>
+
+</li>
+
+<li>
+
+<button id="settingsButton">
+
+<i class="fa-solid fa-gear"></i>
+
+Settings
+
+</button>
+
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- =================================================== -->
+<!-- MAIN CONTAINER -->
+<!-- =================================================== -->
+
+<main id="mainContainer">
+
+<!-- =================================================== -->
+<!-- LEFT PANEL -->
+<!-- =================================================== -->
+
+<aside id="leftPanel">
+
+<div class="profileCard">
+
+<div class="avatar">
+
+<i class="fa-solid fa-user-graduate"></i>
+
+</div>
+
+<h2>
+
+Construction Explorer
+
+</h2>
+
+<p>
+
+Level
+
+<span id="playerLevel">
+
+1
+
+</span>
+
+</p>
+
+<div class="xpBar">
+
+<div id="xpFill"></div>
+
+</div>
+
+<p>
+
+XP
+
+<span id="xpValue">
+
+0
+
+</span>
+
+</p>
+
+</div>
+
+<div class="statisticsCard">
+
+<h3>
+
+Current Statistics
+
+</h3>
+
+<div class="stat">
+
+<span>
+
+Score
+
+</span>
+
+<strong id="score">
+
+0
+
+</strong>
+
+</div>
+
+<div class="stat">
+
+<span>
+
+Accuracy
+
+</span>
+
+<strong id="accuracy">
+
+0%
+
+</strong>
+
+</div>
+
+<div class="stat">
+
+<span>
+
+Correct
+
+</span>
+
+<strong id="correct">
+
+0
+
+</strong>
+
+</div>
+
+<div class="stat">
+
+<span>
+
+Wrong
+
+</span>
+
+<strong id="wrong">
+
+0
+
+</strong>
+
+</div>
+
+<div class="stat">
+
+<span>
+
+Streak
+
+</span>
+
+<strong id="streak">
+
+0
+
+</strong>
+
+</div>
+
+<div class="stat">
+
+<span>
+
+Questions
+
+</span>
+
+<strong id="questionCounter">
+
+0
+
+</strong>
+
+</div>
+
+</div>
+
+<div class="quickActions">
+
+<button id="newGame">
+
+<i class="fa-solid fa-play"></i>
+
+New Game
+
+</button>
+
+<button id="continueGame">
+
+<i class="fa-solid fa-forward"></i>
+
+Continue
+
+</button>
+
+<button id="reviewMode">
+
+<i class="fa-solid fa-repeat"></i>
+
+Review
+
+</button>
+
+</div>
+
+</aside>
+
+<!-- =================================================== -->
+<!-- CENTER PANEL -->
+<!-- =================================================== -->
+
+<section id="centerPanel">
+
+<div class="dashboardCard">
+
+<h2>
+
+Academic Progress Dashboard
+
+</h2>
+
+<p>
+
+Track your mastery across all five years of the curriculum.
+
+</p>
+
+</div>
+
+<!-- ========================================== -->
+<!-- SVG DASHBOARD -->
+<!-- ========================================== -->
+
+<div id="dashboardContainer">
+
+<svg
+id="semesterWheel"
+viewBox="0 0 900 900">
+
+<!-- OUTER RING -->
+
+<circle
+
+cx="450"
+
+cy="450"
+
+r="390"
+
+class="outerRing"
+
+/>
+
+<!-- YEAR RING -->
+
+<circle
+
+cx="450"
+
+cy="450"
+
+r="340"
+
+class="yearRing"
+
+/>
+
+<!-- CATEGORY RING -->
+
+<circle
+
+cx="450"
+
+cy="450"
+
+r="290"
+
+class="categoryRing"
+
+/>
+
+<!-- ================================================= -->
+<!-- SEMESTER SECTORS WILL BE GENERATED BY JAVASCRIPT -->
+<!-- ================================================= -->
+
+<g id="semesterSectors">
+
+</g>
+
+<!-- ================================================= -->
+<!-- CENTER DISPLAY -->
+<!-- ================================================= -->
+
+<g id="centerDisplay">
+
+<circle
+
+cx="450"
+
+cy="450"
+
+r="160"
+
+class="centerCircle"/>
+
+<text
+
+id="centerTitle"
+
+x="450"
+
+y="380"
+
+text-anchor="middle">
+
+Construction Explorer
+
+</text>
+
+<text
+
+id="centerLevel"
+
+x="450"
+
+y="430"
+
+text-anchor="middle">
+
+Level 1
+
+</text>
+
+<text
+
+id="centerPercent"
+
+x="450"
+
+y="500"
+
+text-anchor="middle">
+
+0%
+
+</text>
+
+<text
+
+id="centerScore"
+
+x="450"
+
+y="560"
+
+text-anchor="middle">
+
+Score 0
+
+</text>
+
+</g>
+
+</svg>
+
+</div>
+
+<!-- ====================================== -->
+<!-- SEMESTER LEGEND -->
+<!-- ====================================== -->
+
+<div id="semesterLegend">
+
+<div class="legendItem">
+
+<span class="legendColor y1"></span>
+
+Year I
+
+</div>
+
+<div class="legendItem">
+
+<span class="legendColor y2"></span>
+
+Year II
+
+</div>
+
+<div class="legendItem">
+
+<span class="legendColor y3"></span>
+
+Year III
+
+</div>
+
+<div class="legendItem">
+
+<span class="legendColor y4"></span>
+
+Year IV
+
+</div>
+
+<div class="legendItem">
+
+<span class="legendColor y5"></span>
+
+Year V
+
+</div>
+
+<div class="legendItem">
+
+<span class="legendColor elective"></span>
+
+Electives
+
+</div>
+
+</div>
+
+<!-- ====================================== -->
+<!-- LIVE STATUS -->
+<!-- ====================================== -->
+
+<div id="liveStatus">
+
+<div class="statusCard">
+
+<h3>
+
+Current Rank
+
+</h3>
+
+<h2 id="rankName">
+
+Freshman
+
+</h2>
+
+</div>
+
+<div class="statusCard">
+
+<h3>
+
+Semester Mastered
+
+</h3>
+
+<h2 id="semesterMastered">
+
+0 / 10
+
+</h2>
+
+</div>
+
+<div class="statusCard">
+
+<h3>
+
+Courses Mastered
+
+</h3>
+
+<h2 id="courseMastered">
+
+0
+
+</h2>
+
+</div>
+
+<div class="statusCard">
+
+<h3>
+
+Achievements
+
+</h3>
+
+<h2 id="achievementCount">
+
+0
+
+</h2>
+
+</div>
+
+</div>
+
+<!-- =================================================== -->
+<!-- GAME ARENA -->
+<!-- =================================================== -->
+
+<section id="gameArena">
+
+    <div class="sectionHeader">
+
+        <h2>
+            <i class="fa-solid fa-gamepad"></i>
+            Quiz Arena
+        </h2>
+
+        <div class="gameControls">
+
+            <button id="practiceMode">
+                Practice
+            </button>
+
+            <button id="timedMode">
+                Timed Challenge
+            </button>
+
+            <button id="examMode">
+                Final Exam
+            </button>
+
+            <button id="randomMode">
+                Random Mix
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="questionContainer">
+
+        <div id="questionType">
+
+            Course Identification
+
+        </div>
+
+        <div id="questionNumber">
+
+            Question
+            <span>1</span>
+
+            /
+            <span>50</span>
+
+        </div>
+
+        <h1 id="questionText">
+
+            Loading Question...
+
+        </h1>
+
+        <div id="timerContainer">
+
+            <div id="timerBar">
+
+                <div id="timerFill"></div>
+
+            </div>
+
+            <div id="timerText">
+
+                30 Seconds Remaining
+
+            </div>
+
+        </div>
+
+        <div id="answerGrid">
+
+            <button class="answerButton" id="answerA"></button>
+
+            <button class="answerButton" id="answerB"></button>
+
+            <button class="answerButton" id="answerC"></button>
+
+            <button class="answerButton" id="answerD"></button>
+
+        </div>
+
+        <div id="nextQuestionArea">
+
+            <button id="nextQuestion">
+
+                Next Question
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =================================================== -->
+<!-- FEEDBACK PANEL -->
+<!-- =================================================== -->
+
+<section id="feedbackPanel">
+
+    <div class="feedbackHeader">
+
+        <h2>
+
+            Answer Feedback
+
+        </h2>
+
+    </div>
+
+    <div id="feedbackIcon">
+
+        ✔
+
+    </div>
+
+    <h2 id="feedbackTitle">
+
+        Correct!
+
+    </h2>
+
+    <p id="feedbackMessage">
+
+        Explanation will appear here.
+
+    </p>
+
+    <div id="courseDetails">
+
+        <div class="detailRow">
+
+            <strong>Course</strong>
+
+            <span id="detailCourse"></span>
+
+        </div>
+
+        <div class="detailRow">
+
+            <strong>Course Code</strong>
+
+            <span id="detailCode"></span>
+
+        </div>
+
+        <div class="detailRow">
+
+            <strong>ECTS</strong>
+
+            <span id="detailECTS"></span>
+
+        </div>
+
+        <div class="detailRow">
+
+            <strong>Prerequisite</strong>
+
+            <span id="detailPrerequisite"></span>
+
+        </div>
+
+        <div class="detailRow">
+
+            <strong>Year</strong>
+
+            <span id="detailYear"></span>
+
+        </div>
+
+        <div class="detailRow">
+
+            <strong>Semester</strong>
+
+            <span id="detailSemester"></span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =================================================== -->
+<!-- ACHIEVEMENTS -->
+<!-- =================================================== -->
+
+<section id="achievementPanel">
+
+    <div class="sectionHeader">
+
+        <h2>
+
+            <i class="fa-solid fa-trophy"></i>
+
+            Achievements
+
+        </h2>
+
+    </div>
+
+    <div id="achievementGrid">
+
+    </div>
+
+</section>
+
+<!-- =================================================== -->
+<!-- CURRICULUM EXPLORER -->
+<!-- =================================================== -->
+
+<section id="curriculumExplorer">
+
+    <div class="sectionHeader">
+
+        <h2>
+
+            <i class="fa-solid fa-book-open"></i>
+
+            Curriculum Explorer
+
+        </h2>
+
+    </div>
+
+    <div id="searchArea">
+
+        <input
+
+            type="text"
+
+            id="courseSearch"
+
+            placeholder="Search course, code, prerequisite...">
+
+        <button id="searchButton">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </button>
+
+    </div>
+
+    <div id="semesterButtons">
+
+        <button data-semester="Y1S1">Year I Semester I</button>
+
+        <button data-semester="Y1S2">Year I Semester II</button>
+
+        <button data-semester="Y2S1">Year II Semester I</button>
+
+        <button data-semester="Y2S2">Year II Semester II</button>
+
+        <button data-semester="Y3S1">Year III Semester I</button>
+
+        <button data-semester="Y3S2">Year III Semester II</button>
+
+        <button data-semester="Y4S1">Year IV Semester I</button>
+
+        <button data-semester="Y4S2">Year IV Semester II</button>
+
+        <button data-semester="Y5S1">Year V Semester I</button>
+
+        <button data-semester="Y5S2">Year V Semester II</button>
+
+        <button data-semester="ELECTIVE">Electives</button>
+
+    </div>
+
+    <div id="courseList">
+
+    </div>
+
+</section>
+
+<!-- =================================================== -->
+<!-- ANALYTICS -->
+<!-- =================================================== -->
+
+<section id="analyticsPanel">
+
+    <div class="sectionHeader">
+
+        <h2>
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            Performance Analytics
+
+        </h2>
+
+    </div>
+
+    <div id="analyticsCards">
+
+        <div class="analyticsCard">
+
+            <h3>Average Accuracy</h3>
+
+            <h2 id="avgAccuracy">0%</h2>
+
+        </div>
+
+        <div class="analyticsCard">
+
+            <h3>Strongest Semester</h3>
+
+            <h2 id="bestSemester">-</h2>
+
+        </div>
+
+        <div class="analyticsCard">
+
+            <h3>Needs Review</h3>
+
+            <h2 id="weakSemester">-</h2>
+
+        </div>
+
+        <div class="analyticsCard">
+
+            <h3>Total Questions</h3>
+
+            <h2 id="questionsAnswered">
+
+                0
+
+            </h2>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =================================================== -->
+<!-- SETTINGS -->
+<!-- =================================================== -->
+
+<section id="settingsPanel">
+
+    <div class="sectionHeader">
+
+        <h2>
+
+            <i class="fa-solid fa-gear"></i>
+
+            Settings
+
+        </h2>
+
+    </div>
+
+    <div class="settingItem">
+
+        <label>
+
+            Theme
+
+        </label>
+
+        <select id="themeSelect">
+
+            <option>Light</option>
+
+            <option>Dark</option>
+
+            <option>System</option>
+
+        </select>
+
+    </div>
+
+    <div class="settingItem">
+
+        <label>
+
+            Difficulty
+
+        </label>
+
+        <select id="difficultySelect">
+
+            <option>Easy</option>
+
+            <option>Medium</option>
+
+            <option>Hard</option>
+
+            <option>Adaptive</option>
+
+        </select>
+
+    </div>
+
+    <div class="settingItem">
+
+        <label>
+
+            Sound Effects
+
+        </label>
+
+        <input type="checkbox" id="soundToggle">
+
+    </div>
+
+    <div class="settingItem">
+
+        <label>
+
+            Animations
+
+        </label>
+
+        <input type="checkbox" id="animationToggle" checked>
+
+    </div>
+
+</section>
+<!-- ===================================================== -->
+<!-- FLOATING NOTIFICATIONS -->
+<!-- ===================================================== -->
+
+<div id="notificationContainer">
+
+    <div id="notification">
+
+        <div class="notificationIcon">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+        </div>
+
+        <div class="notificationContent">
+
+            <h3 id="notificationTitle">
+
+                Notification
+
+            </h3>
+
+            <p id="notificationMessage">
+
+                Welcome to CoTM Academic Challenge.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- LEVEL UP MODAL -->
+<!-- ===================================================== -->
+
+<div class="modal" id="levelUpModal">
+
+    <div class="modalContent">
+
+        <div class="modalIcon">
+
+            ⭐
+
+        </div>
+
+        <h1>
+
+            LEVEL UP!
+
+        </h1>
+
+        <h2 id="newLevelTitle">
+
+            Construction Explorer
+
+        </h2>
+
+        <p id="levelMessage">
+
+            Congratulations!
+
+        </p>
+
+        <button id="closeLevelModal">
+
+            Continue
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- ACHIEVEMENT MODAL -->
+<!-- ===================================================== -->
+
+<div class="modal" id="achievementModal">
+
+    <div class="modalContent">
+
+        <div class="modalIcon">
+
+            🏆
+
+        </div>
+
+        <h1>
+
+            Achievement Unlocked
+
+        </h1>
+
+        <h2 id="achievementTitle">
+
+            Curriculum Master
+
+        </h2>
+
+        <p id="achievementDescription">
+
+            Description
+
+        </p>
+
+        <button id="closeAchievementModal">
+
+            Continue
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- SEMESTER DETAILS MODAL -->
+<!-- ===================================================== -->
+
+<div class="modal" id="semesterModal">
+
+    <div class="modalContent large">
+
+        <div class="modalHeader">
+
+            <h2 id="semesterTitle">
+
+                Semester Details
+
+            </h2>
+
+            <button id="closeSemesterModal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <div id="semesterSummary">
+
+            <div class="summaryCard">
+
+                <h3>
+
+                    Accuracy
+
+                </h3>
+
+                <h1 id="semesterAccuracy">
+
+                    0%
+
+                </h1>
+
+            </div>
+
+            <div class="summaryCard">
+
+                <h3>
+
+                    Mastery
+
+                </h3>
+
+                <h1 id="semesterMastery">
+
+                    0%
+
+                </h1>
+
+            </div>
+
+            <div class="summaryCard">
+
+                <h3>
+
+                    Questions
+
+                </h3>
+
+                <h1 id="semesterQuestions">
+
+                    0
+
+                </h1>
+
+            </div>
+
+        </div>
+
+        <div id="semesterCourseList">
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- GAME OVER -->
+<!-- ===================================================== -->
+
+<div class="modal" id="gameOverModal">
+
+    <div class="modalContent">
+
+        <div class="modalIcon">
+
+            🎓
+
+        </div>
+
+        <h1>
+
+            Session Complete
+
+        </h1>
+
+        <div class="gameSummary">
+
+            <div>
+
+                Final Score
+
+                <h2 id="finalScore">
+
+                    0
+
+                </h2>
+
+            </div>
+
+            <div>
+
+                Accuracy
+
+                <h2 id="finalAccuracy">
+
+                    0%
+
+                </h2>
+
+            </div>
+
+            <div>
+
+                XP Earned
+
+                <h2 id="earnedXP">
+
+                    0
+
+                </h2>
+
+            </div>
+
+            <div>
+
+                Correct
+
+                <h2 id="finalCorrect">
+
+                    0
+
+                </h2>
+
+            </div>
+
+        </div>
+
+        <button id="playAgainButton">
+
+            Play Again
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- FOOTER -->
+<!-- ===================================================== -->
+
+<footer id="pageFooter">
+
+    <div class="footerLeft">
+
+        <h2>
+
+            CoTM Academic Challenge
+
+        </h2>
+
+        <p>
+
+            Interactive Curriculum Mastery Platform
+
+        </p>
+
+    </div>
+
+    <div class="footerCenter">
+
+        <p>
+
+            Construction Technology & Management
+
+        </p>
+
+        <p>
+
+            Five-Year Curriculum
+
+        </p>
+
+    </div>
+
+    <div class="footerRight">
+
+        <button id="resetProgress">
+
+            Reset Progress
+
+        </button>
+
+    </div>
+
+</footer>
+
+</section>
+
+</main>
+
+<!-- ===================================================== -->
+<!-- JAVASCRIPT -->
+<!-- ===================================================== -->
+
+<script src="data.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
