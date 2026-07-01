@@ -60,53 +60,6 @@ stroke-width:3;
 circle.done{
 fill:lime;
 }
-<<<<<<< HEAD
 @media(max-width:600px){
 #stats{font-size:14px}
 }
-=======
-
-.back-btn{
-font-weight:600;
-background:#f3f3f3;
-}
-
-@media(min-width:769px){
-
-.mobile-menu{
-display:none;
-}
-
-}
-
-/* Float window */
-
-#card{
-    width: 420px;
-    height: 350px;
-    background-color: #564d24;  /* #4D4746;  #F54927;  #c0c0c0; or yellow; or #add8e6; or green; or #614772; or #800000; or #D891EF; or darkgray; or https://www.computerhope.com/htmcolor.htm */
-    border-radius: 5px;
-    cursor: pointer;
-    position: fixed;
-    padding: 10px;
-    padding-top: 25px;
-    text-align: left;
-    color: #d6c567; /* #000000; or white*/
-}
-
-#myButtonFloat{
-    text-align: right;
-    border: none;
-}
-
-/* General selection style for the whole page */
-::selection {
-  background-color: #ff0000; /* desired background color (e.g., yellow #ffcc00;) */
-  color: #ffffff; /* desired text color (e.g., black) */
-}
-
-/* For compatibility with older Firefox versions (pre-61) */
-::-moz-selection {
-  background-color: #ff0000;
-  color: #ffffff; }
->>>>>>> 8b71dd9124b4e229964a1c90563f6800b651caef
